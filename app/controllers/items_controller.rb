@@ -38,10 +38,10 @@ class ItemsController < ApplicationController
   private
 
   def set_item
-    item = Item.find(params[:id])
+    @item = Item.find(params[:id])
   end
 
   def item_params
-    params.require(:item).permit(:name,:price, :description, :category_id)
+    params.require(:item).permit(:name,:price, :description, :category_id, :photo)
   end
 end
