@@ -1,7 +1,9 @@
   <!-- Initial Navbar -->
   <div class="nav-container">
     <header>
+      <%= link_to root_path do  %>
       <img src="" alt="Logo">
+      <% end %>
       <% if user_signed_in? %>
       <div class="nav-items-logged-in">
         <li class="nav-item dropdown">
