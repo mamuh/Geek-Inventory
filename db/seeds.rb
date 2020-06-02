@@ -19,3 +19,8 @@ Category.create(name: "Mortal Kombat")
 Category.create(name: "Minecraft")
 Category.create(name: "Counter Strike")
 Category.create(name: "Metal Gear Solid")
+
+
+20.times do
+  Item.create(name: "XXX", price: "100", description: "XXX", category_id: 1)
+end
