@@ -22,38 +22,19 @@ li {
    justify-content: space-between;
  }
 
- header .nav-items {
+ header .nav-items-logged-in {
   width: 160px;
   display: flex;
   justify-content: space-between;
  }
 
- header .nav-items a {
-   color: #000;
-   font-weight: bold;
- }
+//  header .nav-items-logged-in a {
+//    color: #000;
+//    font-weight: bold;
+//  }
 
  .nav-container {
    width: 90%;
    max-width: 1700px;
    margin: 0 auto;
  }
-
-
-
-// .nav-container {
-//   width: 90%;
-//   max-width: 1100px;
-//   margin: 0 auto;
-//   display: flex;
-//   justify-content: space-between;
-//   height: 100%;
-//   flex-direction: column;
-//   flex: 1;
-// }
-
-// .nav-container header {
-//   margin-top: 38px;
-//   display: flex;
-//   align-items: center;
-// }
