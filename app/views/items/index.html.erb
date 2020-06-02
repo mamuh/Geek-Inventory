@@ -1,0 +1,21 @@
+<div class="container text-center">
+  <h2>What are you buying?</h2>
+
+    <div class="d-flex flex-wrap justify-content-around">
+      <% @items.each do |item| %>
+          <div class="item-card text-center mt-2 p-2">
+            <ul style="list-style: none">
+              <li><%= cl_image_tag item.photo.key, crop: :fit, width: 150, height: 150, class: "mt-2" %></li>
+              <div class="bg-light">
+                <li><h5><%= item.name %></h5></li>
+              </div>
+                <li><%= item.description %></li>
+              <li><%= item.category.name %></li>
+              <li>$ <%= item.price %></li>
+              <li><%= link_to "Buy", item_transactions_path(item), class: "btn btn-warning" %></li>
+            </ul>
+          </div>
+      <% end %>
+    </div>
+
+</div>
