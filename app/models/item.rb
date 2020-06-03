@@ -3,6 +3,8 @@ class Item < ApplicationRecord
   has_many :transactions, dependent: :destroy
   has_many :reviews, dependent: :destroy
 
+  belongs_to :user
+
   validates :name, presence: true
   validates :price, presence: true
   validates :description, presence: true
