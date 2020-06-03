@@ -1,26 +1,43 @@
-  <div class="profile-container">
-    <div class="profile-header">
-      <img
-        src="https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80" class="avatar"
-        alt="">
-      <div class="user-name">
-        <h2></h2>
-        <h1><%= current_user.name %></h1>
-        <p>O seu e-mail é: <%= current_user.email %></p>
-        <p>O seu papel é: <%= current_user.role %></p>
-        <p>Você está conosco desde: <%= current_user.created_at %></p>
-      </div>
-      <div class="transaction">
-        <% @transactions.each do |transaction| %>
-          <%= transaction.item.name %>
-          <% if transaction.item.photo.attached? %>
-            <%= cl_image_tag transaction.item.photo.key %>
-          <% end %>
-        <% end %>
+<div class="profile-container">
+  <div class="profile-header">
+    <img
+    src="https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80"
+    class="avatar" alt="">
+    <div class="user-name">
+      <h2></h2>
+      <h1><%= current_user.name %></h1>
+      <p>O seu e-mail é: <%= current_user.email %></p>
+      <p>O seu papel é: <%= current_user.role %></p>
+      <p>Você está conosco desde: <%= current_user.created_at %></p>
+    </div>
+  </div>
+
+  <div class="transaction-card-container">
+    <% @transactions.each do |transaction| %>
+    <div class="card-product-transaction">
+      <% if transaction.item.photo.attached? %>
+      <%= cl_image_tag transaction.item.photo.key %>
+      <% end %>
+      <div class="card-product-infos-transaction">
+        <h2><%= transaction.item.name %></h2>
+        <p><%= transaction.item.description %></p>
+        <%= link_to "See details", item_path(transaction.item)  %>
       </div>
     </div>
     <% if current_user.role == "seller" %>
-    <%= link_to  "Sell something", new_item_path, class: "btn btn-primary mt-5 d-flex justify-content-center" %>
+      <%= link_to  "Sell something", new_item_path, class: "btn btn-primary mt-5 d-flex justify-content-center" %>
     <% end %>
   </div>
-  <!-- Comentário -->
+  
+  
+  
+  <!-- <div class="transaction">
+    <% @transactions.each do |transaction| %>
+    <%= transaction.item.name %>
+    <% if transaction.item.photo.attached? %>
+    <%= cl_image_tag transaction.item.photo.key %>
+    <% end %>
+    <% end %>
+  </div> -->
+  <%= link_to  "Sell something", new_item_path, class: "btn btn-primary mt-5 d-flex justify-content-center" %>
+</div>

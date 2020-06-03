@@ -22,9 +22,13 @@
       <%= link_to "Back to shop", items_path, class: "btn btn-secondary" %>
     </div>
   <% end %>
+
   <% if current_user.role == "seller" %>
     <div class="button-links d-flex justify-content-between mt-3">
-      <%= link_to "Edit product", edit_item_path(@item), class: "btn btn-primary" %>
+      <div class="show-buttons">
+        <%= link_to "Back to shop", items_path, class: "btn btn-secondary" %>
+        <%= link_to "Edit product", edit_item_path(@item), class: "btn btn-primary" %>
+      </div>
       <%= link_to '<i class="fas fa-trash-alt"></i>'.html_safe, item_path(@item), method: :delete, class: "btn btn-dark" %>
     </div>
   <% end %>
