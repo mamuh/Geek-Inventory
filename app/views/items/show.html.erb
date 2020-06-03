@@ -3,7 +3,9 @@
 
   <div class="card-product">
     <div class="item-image">
+      <% if @item.photo.attached? %>
       <%= cl_image_tag(@item.photo.key, crop: :fill) %>
+      <% end %>
     </div>
     <div class="card-product-infos">
       <div>
@@ -16,7 +18,7 @@
 
   <% if current_user.role == "buyer" %>
     <div class="button-links d-flex justify-content-between mt-3">
-      <%= link_to "Buy", item_transactions_path(@item), class: "btn btn-success" %>
+      <%= link_to "Buy", item_transactions_path(@item), method: :post, class: "btn btn-success" %>
       <%= link_to "Back to shop", items_path, class: "btn btn-secondary" %>
     </div>
   <% end %>

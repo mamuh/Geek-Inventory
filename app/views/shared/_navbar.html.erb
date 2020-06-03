@@ -1,7 +1,11 @@
   <!-- Initial Navbar -->
   <div class="nav-container">
     <header>
-      <%= image_tag("geek-inventory-dark.svg") %>
+
+      <%= link_to root_path do  %>                      
+        <%= image_tag("geek-inventory-dark.svg") %>
+      <% end %>
+
       <% if user_signed_in? %>
       <div class="nav-items">
         <li class="nav-item dropdown">
