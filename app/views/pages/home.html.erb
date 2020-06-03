@@ -10,7 +10,7 @@
 
 <div class="d-flex flex-wrap justify-content-around my-5">
       <% @items.each do |item| %>
-          <div class="item-card text-center mt-2 p-2">
+          <div class="item-card text-center mt-2 p-2 shadow p-3 mb-5 bg-white rounded-5">
             <ul style="list-style: none">
               <% if item.photo.attached? %>
                 <li><%= cl_image_tag item.photo.key, crop: :fit, width: 150, height: 150, class: "mt-2" %></li>
