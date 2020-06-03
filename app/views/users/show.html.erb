@@ -24,6 +24,8 @@
         <%= link_to "See details", item_path(transaction.item)  %>
       </div>
     </div>
+    <% if current_user.role == "seller" %>
+      <%= link_to  "Sell something", new_item_path, class: "btn btn-primary mt-5 d-flex justify-content-center" %>
     <% end %>
   </div>
   
