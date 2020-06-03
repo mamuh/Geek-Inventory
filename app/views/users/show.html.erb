@@ -10,10 +10,12 @@
         <p>Você está conosco desde: <%= current_user.created_at %></p>
       </div>
       <div class="transaction">
-        <% @transactions.each do |transaction| %> 
+        <% @transactions.each do |transaction| %>
           <%= transaction.item.name %>
-          <%= cl_image_tag transaction.item.photo.key %>
-        <% end %> 
+          <% if transaction.item.photo.attached? %>
+            <%= cl_image_tag transaction.item.photo.key %>
+          <% end %>
+        <% end %>
       </div>
     </div>
   </div>
