@@ -22,8 +22,8 @@ class ItemsController < ApplicationController
   end
 
   def update
-    item.update(items_params)
-    redirect_to item_path(item)
+    @item.update(item_params)
+    redirect_to item_path(@item)
   end
 
   def destroy
