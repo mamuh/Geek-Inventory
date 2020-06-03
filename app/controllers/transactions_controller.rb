@@ -9,7 +9,7 @@ class TransactionsController < ApplicationController
     @transaction.user = current_user
     @transaction.quantity = @transaction.quantity.nil? ? 1 : @transaction.quantity + 1
     if @transaction.save
-      redirect_to item_path(@transaction.item)
+      redirect_to user_path(current_user)
     else
       render :new
     end
