@@ -14,7 +14,9 @@
                 <li><%= item.description %></li>
               <li><%= item.category.name %></li>
               <li>$ <%= item.price %></li>
-               <li><%= link_to "Buy", item_transactions_path(item),method: :post, class: "btn btn-success" %></li>
+                <% if current_user.role == "seller" %>
+                  <li><%= link_to "Buy", item_transactions_path(item),method: :post, class: "btn btn-success" %></li>
+                <% end %>
               <li><%= link_to "Details", item_path(item), class: "btn btn-secondary" %></li>
             </ul>
           </div>
