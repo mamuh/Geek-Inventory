@@ -1,8 +1,8 @@
-* {
+/** {
   margin: 0;
   padding: 0;
 }
-
+*/
 a {
   text-decoration: none;
 }
@@ -15,8 +15,7 @@ li {
   list-style: none;
 }
 
-header {
-  margin-top: 30px;
+/*header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -35,9 +34,9 @@ header .nav-items a {
   color: #000;
   font-weight: bold;
   padding-right: 20px;
-}
+}*/
 
-.nav-container {
+/*.nav-container {
   width: 90%;
   max-width: 1700px;
   margin: 0 auto;
@@ -55,3 +54,4 @@ header .nav-items a {
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+*/

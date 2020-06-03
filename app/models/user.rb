@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   has_many :items, through: :transactions
   has_many :reviews
-  has_many :transactions
+  has_many :transactions, dependent: :destroy
 
   validates :name, presence: true
   validates :role, presence: true
