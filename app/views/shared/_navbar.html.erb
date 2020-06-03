@@ -1,14 +1,14 @@
   <!-- Initial Navbar -->
   <div class="nav-container">
     <header>
-      <img src="" alt="Logo">
+      <%= image_tag("geek-inventory-dark.svg") %>
       <% if user_signed_in? %>
-      <div class="nav-items-logged-in">
+      <div class="nav-items">
         <li class="nav-item dropdown">
           <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-            <%= link_to "Profile", "#", class: "dropdown-item" %>
+            <%= link_to "Profile", user_path(current_user.id), class: "dropdown-item" %>
           </div>
         </li>
       </div>
