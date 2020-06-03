@@ -19,14 +19,14 @@ body {
   display: flex;
   width: 90%;
   max-width: 1700px;
-  height: 150px;
+  height: 100px;
   align-items: center;
   justify-content: space-between;
 }
 
 .footer-container footer {
   display: flex;
-  // align-items: center;
+  align-items: center;
   justify-content: space-between;
 
 }
