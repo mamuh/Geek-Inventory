@@ -9,6 +9,8 @@ class User < ApplicationRecord
   has_many :transactions, dependent: :destroy
   has_many :items
 
+  has_one_attached :photo
+
   validates :name, presence: true
   validates :role, presence: true
 end
