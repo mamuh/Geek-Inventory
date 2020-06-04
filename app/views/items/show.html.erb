@@ -21,7 +21,16 @@
       <%= link_to "Buy", item_transactions_path(@item), method: :post, class: "btn btn-success" %>
       <%= link_to "Back to shop", items_path, class: "btn btn-secondary" %>
     </div>
-  <% end %>
+  <% else %>
 
+    <div class="button-links d-flex justify-content-between mt-3">
+        <%= link_to "Back to shop", items_path, class: "btn btn-secondary" %>
+      <% if current_user == @item.user %>
+        <div class="show-buttons">
+          <%= link_to "Edit product", edit_item_path(@item), class: "btn btn-primary" %>
+          <%= link_to '<i class="fas fa-trash-alt"></i>'.html_safe, item_path(@item), method: :delete, class: "btn btn-dark" %>
+        </div>
+      <% end %>
+      <% end %>
     </div>
 </div>

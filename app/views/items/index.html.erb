@@ -1,8 +1,8 @@
 <div class="container text-center">
 
   <h2>What are you buying?</h2>
-  <div class="form-group form-inline justify-content-center"> 
-    <%= form_tag items_path do %>
+  <div class="form-group form-inline justify-content-center">
+    <%= form_tag items_path, method: :get do %>
     <%= text_field_tag :query,
       params[:query],
       class: "form-control",
