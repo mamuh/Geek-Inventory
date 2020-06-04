@@ -1,7 +1,9 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path('banner.png') %>); background-size: cover;">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url(<%= image_path('banner.png') %>); background-size: cover;">
   <div class="container">
-    <h1>Geek Inventory</h1>
-    <%= link_to "Browse", items_path, class: "btn btn-success" %>
+    <div class="cta">
+      <h1> Conheça nossos produtos clicando abaixo!</h1>
+      <%= link_to "Clique", items_path, class: "btn btn-warning" %>
+    </div>
   </div>
 </div>
 
