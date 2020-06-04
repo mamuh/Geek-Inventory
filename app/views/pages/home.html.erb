@@ -1,4 +1,5 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url(<%= image_path('banner.png') %>); background-size: cover;">
+<div class="banner"
+  style="background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url(<%= image_path('banner.png') %>); background-size: cover;">
   <div class="container">
     <div class="cta">
       <h1 class="d-inline-block" id="banner-typed-text"></h1>
@@ -7,25 +8,27 @@
   </div>
 </div>
 
-<div  class="container">
+<div class="container">
 
 
-<div class="d-flex flex-wrap justify-content-around my-5">
-      <% @items.each do |item| %>
-          <div class="item-card text-center mt-2 p-2 shadow p-3 mb-5 bg-white rounded-5">
-            <ul style="list-style: none">
-              <% if item.photo.attached? %>
-                <li><%= cl_image_tag item.photo.key, crop: :fit, width: 150, height: 150, class: "mt-2" %></li>
-              <% end %>
-              <div class="bg-light">
-                <li><h5><%= item.name %></h5></li>
-              </div>
-              <li><%= item.category.name %></li>
-              <li>$ <%= item.price %></li>
-              <li><%= link_to "Details", item_path(item), class: "btn btn-secondary" %></li>
-            </ul>
-          </div>
-      <% end %>
+  <div class="d-flex flex-wrap justify-content-around my-5">
+    <% @items.each do |item| %>
+    <div class="item-card text-center mt-2 p-2 shadow p-3 mb-5 bg-white rounded-5">
+      <ul style="list-style: none">
+        <% if item.photo.attached? %>
+        <li><%= cl_image_tag item.photo.key, crop: :fit, width: 150, height: 150, class: "mt-2" %></li>
+        <% end %>
+        <div class="bg-light">
+          <li>
+            <h5><%= item.name %></h5>
+          </li>
+        </div>
+        <li><%= item.category.name %></li>
+        <li>$ <%= item.price %></li>
+        <li><%= link_to "Details", item_path(item), class: "btn btn-secondary" %></li>
+      </ul>
     </div>
+    <% end %>
+  </div>
 
 </div>
