@@ -1,19 +1,27 @@
 <div class="profile-container">
-  <div class="profile-header">
-    <img
-    src="https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80"
-    class="avatar" alt="">
+  <div class="profile-header align-items-center">
+
+    <% if current_user.photo.attached? %>
+      <%= cl_image_tag current_user.photo.key, crop: :fill, width: 200, height: 200, class: "avatar-lg" %>
+    <% else %>
+      <img src="https://avatars1.githubusercontent.com/u/302001?s=88&v=4"
+        class="avatar-lg" alt="" width="200">
+    <% end %>
+
     <div class="user-name">
       <h2></h2>
       <h1><%= current_user.name %></h1>
-      <p>O seu e-mail é: <%= current_user.email %></p>
-      <p>O seu papel é: <%= current_user.role %></p>
-      <p>Você está conosco desde: <%= current_user.created_at %></p>
+      <p><%= current_user.email %></p>
+      <p>Our <%= current_user.role %> since: <%= current_user.created_at.strftime("%d-%m-%Y") %></p>
+      <%= link_to "Edit profile", edit_user_registration_path, class: "btn btn-outline-secondary" %>
     </div>
   </div>
-    <% if current_user.role == "seller" %>
-      <%= link_to  "Sell something", new_item_path, class: "btn btn-primary mt-5 d-flex justify-content-center" %>
-    <% end %>
+
+
+
+  <% if current_user.role == "seller" %>
+    <%= link_to "Sell something", new_item_path, class: "btn btn-primary mt-5 d-flex justify-content-center" %>
+  <% end %>
 
   <div class="transaction-card-container">
     <% @transactions.each do |transaction| %>
