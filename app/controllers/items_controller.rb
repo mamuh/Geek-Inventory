@@ -3,6 +3,7 @@ class ItemsController < ApplicationController
 
   def index
     @items = Item.all
+    @items = @items.search_by_name(params[:query])
   end
 
   def show
