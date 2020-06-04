@@ -14,10 +14,10 @@
   font-weight: bold;
 }
 
-.profile-header .avatar {
+/*.profile-header .avatar {
   width: 200px;
   border-radius: 2%;
-}
+}*/
 
 .user-name {
   display: flex;
@@ -77,16 +77,12 @@
     max-width: 980px;
     margin: 0 auto;
   }
-  
+
   .profile-header {
     display: flex;
     align-items: center;
     margin-top: 48px;
     justify-content: space-between;
-  }
-  
-  .profile-header img {
-    width: 150px;
   }
 
   .user-name {
@@ -99,18 +95,14 @@
 
 // Only on medium devices (tablets, 768px and down)
 @media(max-width: 768px) {
-  .profile-header img {
-    width: 150px;
-    border-radius: 50%;
-  }
-  
+
   .profile-header {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 50px 0;
   }
-  
+
   .user-name {
     display: flex;
     flex-direction: column;
@@ -133,7 +125,7 @@
   .profile-header {
     padding: 50px 0;
   }
-  
+
   .user-name h1 {
     font-size: 3em;
     text-align: center;
@@ -150,7 +142,7 @@
     max-width: 330px;
     text-align: center;
   }
-  
+
   .user-name h1 {
     font-size: 2.2em;
     text-align: center;
@@ -171,7 +163,7 @@
     max-width: 300px;
     text-align: center;
   }
-  
+
   .user-name h1 {
     font-size: 1.3em;
     text-align: center;
