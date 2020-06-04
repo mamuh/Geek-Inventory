@@ -9,7 +9,6 @@
     <% end %>
 
     <div class="user-name">
-      <h2></h2>
       <h1><%= current_user.name %></h1>
       <p><%= current_user.email %></p>
       <p>Our <%= current_user.role %> since: <%= current_user.created_at.strftime("%d-%m-%Y") %></p>
