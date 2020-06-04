@@ -8,8 +8,7 @@
 .banner h1 {
   margin-bottom: 15px;
   color: white;
-  // text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 80px;
+  font-size: 20px;
   font-family: 'Anton', sans-serif;;
 }
 
@@ -18,4 +17,17 @@
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.cta {
+  width: 300px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px 20px 20px 20px;
+  border: 5px solid #fff1f1;
+  text-align: center;
+}
+.cta h1 {
+  color: black;
+  font-family: 'Cairo', sans-serif;
 }
