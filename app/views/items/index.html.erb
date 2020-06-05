@@ -15,7 +15,6 @@
     <% end %>
   </div>
 
-
   <div class="cards">
     <% @items.each do |item| %>
     <div class="card-trip">
@@ -24,9 +23,9 @@
           <%= cl_image_tag item.photo.key, crop: :fit, width: 359, height: 200 %>
         <% end %>
       <% end %>
-      <% if current_user.role == "seller" %>
-        <%= link_to "Buy", item_transactions_path(item),method: :post, class: "btn-absolute" %>
-      <% end %>
+
+      <%= link_to "Buy", item_transactions_path(item),method: :post, class: "btn-absolute" %>
+
       <div class="card-trip-infos">
         <div>
 
