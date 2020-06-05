@@ -2,6 +2,7 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-gap: 16px;
+	margin: 40px 0;
 }
 
 .card-trip {
@@ -14,15 +15,13 @@
 
 .card-trip {
 	.btn-absolute {
-		opacity: 0;
+		opacity: 0.3;
 	}
 }
 
-.card-trip:hover {
-	.btn-absolute {
-		opacity: 1;
-		transition: 0.5s;
-	}
+.btn-absolute:hover {
+	opacity: 1;
+	transition: 0.5s;
 }
 
 .btn-absolute {
@@ -44,6 +43,13 @@
 	text-decoration: none;
 	color: #f64a60;
 	font-weight: bold;
+}
+
+.card-info {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
 }
 
 .btn-absolute:hover {
