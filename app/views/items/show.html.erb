@@ -16,12 +16,12 @@
     </div>
   </div>
 
-  <% if current_user.role == "buyer" %>
+
     <div class="button-links d-flex justify-content-between mt-3">
       <%= link_to "Buy", item_transactions_path(@item), method: :post, class: "btn btn-success" %>
       <%= link_to "Back to shop", items_path, class: "btn btn-secondary" %>
     </div>
-  <% else %>
+
 
     <div class="button-links d-flex justify-content-between mt-3">
         <%= link_to "Back to shop", items_path, class: "btn btn-secondary" %>
@@ -31,6 +31,6 @@
           <%= link_to '<i class="fas fa-trash-alt"></i>'.html_safe, item_path(@item), method: :delete, class: "btn btn-dark" %>
         </div>
       <% end %>
-      <% end %>
+
     </div>
 </div>
