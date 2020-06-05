@@ -9,27 +9,33 @@
 </div>
 
 
-<div class="container">
+<div class="container text-center">
 
 
-  <div class="d-flex flex-wrap justify-content-around my-5">
+
+
+
+<div class="cards">
     <% @items.each do |item| %>
-    <div class="item-card text-center mt-2 p-2 shadow p-3 mb-5 bg-white rounded-5">
-      <ul style="list-style: none">
-        <% if item.photo.attached? %>
-        <li><%= cl_image_tag item.photo.key, crop: :fit, width: 150, height: 150, class: "mt-2" %></li>
-        <% end %>
-        <div class="bg-light">
-          <li>
-            <h5><%= item.name %></h5>
-          </li>
+    <div class="card-trip">
+      <%= link_to item_path(item) do %>
+        <%= cl_image_tag item.photo.key, crop: :fit, width: 359, height: 200 %>
+      <% end %>
+      <%= link_to "Buy", item_transactions_path(item),method: :post, class: "btn-absolute" %>
+      <div class="card-trip-infos">
+        <div>
+
+          <div class="card-info text-left">
+            <h2><%= item.name %></h2>
+            <%= link_to "Details", item_path(item) %>
+          </div>
         </div>
-        <li><%= item.category.name %></li>
-        <li>$ <%= item.price %></li>
-        <li><%= link_to "Details", item_path(item), class: "btn btn-secondary" %></li>
-      </ul>
+        <div class="card-trip-princing text-right">
+          <p><%= item.category.name %></p>
+          <h2>$ <%= item.price %>.00</h2>
+        </div>
+      </div>
     </div>
     <% end %>
   </div>
-
 </div>
