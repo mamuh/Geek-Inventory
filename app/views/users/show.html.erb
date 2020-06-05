@@ -12,15 +12,14 @@
     <div class="user-name">
       <h1><%= current_user.name %></h1>
       <p><%= current_user.email %></p>
-      <p>Our <%= current_user.role %> since: <%= current_user.created_at.strftime("%d-%m-%Y") %></p>
+      <p>Our member since: <%= current_user.created_at.strftime("%d-%m-%Y") %></p>
       <%= link_to "Edit profile", edit_user_registration_path, class: "btn btn-outline-secondary" %>
     </div>
   </div>
 
-  <% if current_user.role == "seller" %>
-    <%= link_to "Sell something", new_item_path, class: "btn btn-primary mt-5 d-flex justify-content-center" %>
 
-  <% end %>
+  <%= link_to "Sell something", new_item_path, class: "btn btn-primary mt-5 d-flex justify-content-center" %>
+
 
   <div class="transaction-card-container">
     <% @transactions.each do |transaction| %>

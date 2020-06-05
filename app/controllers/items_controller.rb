@@ -20,10 +20,10 @@ class ItemsController < ApplicationController
     @item.user = current_user
     if @item.photo.attached?
       @item.save
-      redirect_to item_path(@item) 
+      redirect_to item_path(@item)
     else
       render :new
-      flash[:notice] = "Please fill all fields"
+      flash[:notice] = "Please fill in all fields"
     end
   end
 
