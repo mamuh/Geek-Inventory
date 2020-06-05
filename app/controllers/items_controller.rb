@@ -22,8 +22,8 @@ class ItemsController < ApplicationController
       @item.save
       redirect_to item_path(@item)
     else
+      flash[:alert] = "Please fill in all fields"
       render :new
-      flash[:notice] = "Please fill in all fields"
     end
   end
 
