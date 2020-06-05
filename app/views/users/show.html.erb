@@ -23,7 +23,7 @@
 
   <div class="transaction-card-container mt-5 pt-2 text-center">
     <h2>Your most recent purchases</h2>
-    <% @transactions.each do |transaction| %>
+    <% @transactions.order(created_at: :desc).each do |transaction| %>
     <div class="card-product-transaction">
       <% if transaction.item.photo.attached? %>
       <%= cl_image_tag transaction.item.photo.key %>

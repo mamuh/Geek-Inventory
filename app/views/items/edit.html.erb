@@ -7,7 +7,7 @@
       <%= f.input :description %>
       <%= f.association :category %>
       <%= f.input :photo, as: :file %>
-      <%= f.submit %>
+      <%= f.submit "Update item", class: "btn btn-warning" %>
     <% end %>
   </div>
 <% end %>
