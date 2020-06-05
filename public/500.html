@@ -1,17 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>We're sorry, but something went wrong (500)</title>
+  <title>The page you were looking for doesn't exist (404)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
   .rails-default-error-page {
-    background-color: #EFEFEF;
-    color: #2E2F30;
+    background-color: #000000;
+    color: #FFFFFF;
     text-align: center;
     font-family: arial, sans-serif;
     margin: 0;
+    padding: 172px 12% 0;
   }
-
+  .container h1{
+    font-family: 'Press Start 2P', cursive;
+    color: #1f4068;
+    text-shadow:
+               0px 0px 10px #FFFFFF,
+               0px 0px 10px #FFFFFF,
+               0px 0px 10px #FFFFFF,
+               0px 0px 10px #FFFFFF;
+  }
+/*
   .rails-default-error-page div.dialog {
     width: 95%;
     max-width: 33em;
@@ -50,17 +61,16 @@
     border-top-color: #DADADA;
     color: #666;
     box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
+  }*/
   </style>
 </head>
 
 <body class="rails-default-error-page">
-  <!-- This file lives in public/500.html -->
-  <div class="dialog">
-    <div>
-      <h1>We're sorry, but something went wrong.</h1>
-    </div>
-    <p>If you are the application owner check the logs for more information.</p>
+  <div class="container">
+    <h1>GAME OVER</h1>
+    <p>It works on my machine</p>
   </div>
+  <!-- This file lives in public/404.html -->
+  <!-- <img src="game-over-free-vector-background.jpg" alt="some text" width=1000 height=700> -->
 </body>
 </html>
