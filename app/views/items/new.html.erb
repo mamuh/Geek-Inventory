@@ -2,7 +2,7 @@
 <h1>Add a new item to the inventory</h1>
   <%= simple_form_for @item do |f| %>
     <%= f.input :name %>
-    <%= f.input :price, input_html: { min: '1', step: 'any' } %>
+    <%= f.input :price, input_html: { type: 'number', min: '1', step: '1' } %>
     <%= f.input :description %>
     <%= f.association :category %>
     <%= f.input :photo, as: :file %>
