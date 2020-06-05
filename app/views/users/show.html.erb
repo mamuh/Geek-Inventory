@@ -1,4 +1,4 @@
-<div class="profile-container">
+<div class="profile-container pb-3">
 
   <div class="profile-header align-items-center">
 
@@ -18,10 +18,11 @@
   </div>
 
 
-  <%= link_to "Sell something", new_item_path, class: "btn btn-primary mt-5 d-flex justify-content-center" %>
+  <%= link_to "Sell new item", new_item_path, class: "btn btn-danger text-white mt-5 d-flex justify-content-center" %>
 
 
-  <div class="transaction-card-container">
+  <div class="transaction-card-container mt-5 pt-2 text-center">
+    <h2>Your most recent purchases</h2>
     <% @transactions.each do |transaction| %>
     <div class="card-product-transaction">
       <% if transaction.item.photo.attached? %>

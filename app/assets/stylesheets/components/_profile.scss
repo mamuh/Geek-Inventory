@@ -65,6 +65,10 @@
   padding: 0 20px;
   position: relative;
   background-color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 800px;
 }
 
 // End of latest transactions

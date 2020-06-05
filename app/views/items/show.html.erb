@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container py-3">
   <h1><%=@item.name%></h1>
 
   <div class="card-product my-2">
@@ -18,13 +18,13 @@
 
     <div class="button-links d-flex justify-content-between mt-3">
       <div class="show-buttons">
-        <%= link_to "Buy", item_transactions_path(@item), method: :post, class: "btn btn-success" %>
+        <%= link_to "Buy", item_transactions_path(@item), method: :post, class: "btn btn-warning" %>
         <%= link_to "Back to shop", items_path, class: "btn btn-secondary" %>
       </div>
 
       <% if current_user == @item.user %>
         <div class="show-buttons">
-          <%= link_to "Edit product", edit_item_path(@item), class: "btn btn-primary" %>
+          <%= link_to "Edit product", edit_item_path(@item), class: "btn btn-danger text-white" %>
           <%= link_to '<i class="fas fa-trash-alt"></i>'.html_safe, item_path(@item), method: :delete, class: "btn btn-dark" %>
         </div>
       <% end %>

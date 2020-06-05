@@ -1,12 +1,15 @@
-<h1>Create Item</h1>
-<div class="container">
+<div class="container mt-2">
+<h1>Add a new item to the inventory</h1>
   <%= simple_form_for @item do |f| %>
     <%= f.input :name %>
     <%= f.input :price, input_html: { min: '1', step: 'any' } %>
     <%= f.input :description %>
     <%= f.association :category %>
     <%= f.input :photo, as: :file %>
-    <%= f.submit %>
+    <div class="d-flex justify-content-between">
+      <%= f.submit "Create Item", class: "btn btn-warning" %>
+      <%= link_to "Back to shop", items_path, class: "btn btn-outline-secondary" %>
+    </div>
   <% end %>
   <p class="alert alert-danger"><%= notice %></p>
 </div>
