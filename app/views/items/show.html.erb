@@ -1,7 +1,7 @@
 <div class="container">
   <h1><%=@item.name%></h1>
 
-  <div class="card-product">
+  <div class="card-product my-2">
     <div class="item-image">
       <% if @item.photo.attached? %>
       <%= cl_image_tag(@item.photo.key, crop: :fit, width: 300) %>
