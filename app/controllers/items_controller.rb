@@ -3,7 +3,7 @@ class ItemsController < ApplicationController
 
   def index
     @items = Item.all
-    if params[:query]
+    if params[:query].present?
       @items = @items.search_by_name(params[:query])
     end
   end
