@@ -1,38 +1,39 @@
-<div class="banner"
-  style="background-image: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.55)), url(<%= image_path('banner.png') %>); background-size: cover;">
-  <div class="container">
-    <div class="cta">
-      <h1 class="d-inline-block" id="banner-typed-text"></h1>
-      <%= link_to "Browse", items_path, class: "btn btn-warning d-block" %>
-    </div>
-  </div>
-</div>
-
-
-<div class="container text-center pb-3">
-
-
-<div class="cards">
-    <% @items.each do |item| %>
-    <div class="card-trip">
-      <%= link_to item_path(item) do %>
-        <%= cl_image_tag item.photo.key, crop: :fit, width: 359, height: 200 %>
-      <% end %>
-      <%= link_to "Buy", item_transactions_path(item),method: :post, class: "btn-absolute" %>
-      <div class="card-trip-infos">
-        <div>
-
-          <div class="card-info text-left">
-            <h2><%= item.name %></h2>
-            <%= link_to "Details", item_path(item) %>
-          </div>
-        </div>
-        <div class="card-trip-princing text-right">
-          <p><%= item.category.name %></p>
-          <h2>$ <%= item.price %>.00</h2>
-        </div>
+<div class="container">
+  <div class="banner"
+    style="background-image: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.55)), url(<%= image_path('banner.png') %>); background-size: cover;">
+    <div class="container">
+      <div class="cta">
+        <h1 class="d-inline-block" id="banner-typed-text"></h1>
+        <%= link_to "Browse", items_path, class: "btn btn-warning d-block" %>
       </div>
     </div>
-    <% end %>
+  </div>
+
+
+  <div class="text-center pb-3">
+
+    <div class="cards">
+      <% @items.each do |item| %>
+      <div class="card-trip">
+        <%= link_to item_path(item) do %>
+          <%= cl_image_tag item.photo.key, crop: :fit, width: 359, height: 200 %>
+        <% end %>
+        <%= link_to "Buy", item_transactions_path(item),method: :post, class: "btn-absolute" %>
+        <div class="card-trip-infos">
+          <div>
+
+            <div class="card-info text-left">
+              <h2><%= item.name %></h2>
+              <%= link_to "Details", item_path(item) %>
+            </div>
+          </div>
+          <div class="card-trip-princing text-right">
+            <p><%= item.category.name %></p>
+            <h2>$ <%= item.price %>.00</h2>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
   </div>
 </div>

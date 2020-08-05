@@ -1,21 +1,24 @@
 .cards {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	grid-gap: 16px;
+	grid-gap: 20px;
 	margin: 40px 0;
 }
 
 .card-trip {
 	overflow: hidden;
 	background: white;
-	border-radius: 4px;
 	position: relative;
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  padding: 10px 0 0 0;
 }
 
 .card-trip {
 	.btn-absolute {
+    border-radius: 10px;
 		opacity: 0.3;
+    padding: 20px;
 	}
 }
 
@@ -61,10 +64,6 @@
 	font-size: 17px;
 	font-weight: bold;
 	margin: 0;
-}
-
-.card-trip {
-	border-radius: 3px;
 }
 
 .card-trip p {

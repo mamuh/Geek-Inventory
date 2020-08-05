@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap');
 
+body {
+  margin-bottom: 90px;
+  background-color: white;
+}
+
 .banner {
   background-size: cover;
   background-position: center;
   padding: 150px 0;
   height: 70vh;
+  border-radius: 30px;
 }
 
 .banner h1 {
