@@ -1,23 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Zetta&display=swap');
 
 body {
   margin-bottom: 90px;
   background-color: white;
+  font-family: 'Ubuntu', sans-serif;
+  color: #212121;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .banner {
-  background-size: cover;
+  background-image: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.05)), url('https://i.redd.it/5b1vg0i66hv01.png');
+  // background-attachment: fixed;
   background-position: center;
   padding: 150px 0;
-  height: 70vh;
-  border-radius: 30px;
+  height: 60vh;
+  border-radius: 25px;
 }
 
 .banner h1 {
   margin-bottom: 15px;
   color: white;
   font-size: 20px;
-  font-family: 'Anton', sans-serif;
+  font-family: 'Lexend Zetta', sans-serif;
 }
 
 .banner p {
@@ -28,7 +37,7 @@ body {
 }
 
 .cta {
-  width: 300px;
+  width: 350px;
   margin: 0 auto;
   background-color: rgba(255,255,255,0.95);
   border-radius: 3px;
@@ -42,11 +51,7 @@ body {
   min-height: 17px;
 }
 
-body {
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 16px;
-}
-
-h1, h2, h3 {
-  font-family: 'Ubuntu', sans-serif;
+.home-header {
+  text-align: left;
+  margin-top: 40px;
 }

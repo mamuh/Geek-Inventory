@@ -2,9 +2,9 @@ import Typed from 'typed.js';
 
 const loadDynamicBannerText = () => {
   new Typed('#banner-typed-text', {
-    strings: ["Geek Inventory", "Check out our items!"],
-    typeSpeed: 70,
-    loop: true
+    strings: ["Geek Inventory"],
+    typeSpeed: 100,
+    startDelay: 1000
   });
 }
 

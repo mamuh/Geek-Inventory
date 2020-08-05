@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'devise'
 gem 'cloudinary', '~> 1.12.0'
 gem 'kaminari'
+gem 'stripe'
 
 gem 'dotenv-rails', groups: [:development, :test]
 # Use Active Storage variant

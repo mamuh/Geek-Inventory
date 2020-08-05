@@ -1,5 +1,5 @@
-<div class="container w-50 bg-light mt-3 p-4 shadow-sm" style="border-radius: 15px;">
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div class="container w-50 bg-light mt-3 py-4 px-5 shadow-sm" style="border-radius: 15px;">
+<h2>Edit <%= resource_name.to_s.humanize %></h2><br>
 
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
     <%= f.error_notification %>
@@ -16,10 +16,12 @@
                   input_html: { autocomplete: "name" }%>
       <%= f.input :password,
                   hint: "leave it blank if you don't want to change it",
+                  label: "Set new password",
                   required: false,
                   input_html: { autocomplete: "new-password" } %>
       <%= f.input :password_confirmation,
                   required: false,
+                  label: "Confirm new password",
                   input_html: { autocomplete: "new-password" } %>
       <%= f.input :current_password,
                   hint: "we need your current password to confirm your changes",
