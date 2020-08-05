@@ -1,14 +1,17 @@
 <div class="container w-50 bg-light mt-3 p-4 shadow-sm" style="border-radius: 15px;">
   <% if current_user == @item.user %>
-    <h1>Create Item</h1>
     <div class="container">
+    <h2>Edit your item</h2><br>
       <%= simple_form_for @item do |f| %>
         <%= f.input :name %>
         <%= f.input :price %>
         <%= f.input :description %>
         <%= f.association :category %>
         <%= f.input :photo, as: :file %>
-        <%= f.submit "Update item", class: "btn btn-warning btn-round" %>
+        <div class="d-flex justify-content-between">
+          <%= f.submit "Update item", class: "btn btn-warning btn-round" %>
+          <%= link_to "Back to shop", items_path, class: "btn btn-outline-secondary btn-round" %>
+        </div>
       <% end %>
     </div>
   <% end %>

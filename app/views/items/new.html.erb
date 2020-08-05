@@ -1,5 +1,5 @@
 <div class="container w-50 bg-light mt-3 p-4 shadow-sm" style="border-radius: 15px;">
-<h1>Add a new item to the inventory</h1>
+<h2>Add new item to your inventory</h2><br>
   <%= simple_form_for @item do |f| %>
     <%= f.input :name %>
     <%= f.input :price, input_html: { type: 'number', min: '1', step: '1' } %>
@@ -7,7 +7,7 @@
     <%= f.association :category %>
     <%= f.input :photo, as: :file %>
     <div class="d-flex justify-content-between">
-      <%= f.submit "Create Item", class: "btn btn-warning btn-round" %>
+      <%= f.submit "Add Item", class: "btn btn-warning btn-round" %>
       <%= link_to "Back to shop", items_path, class: "btn btn-outline-secondary btn-round" %>
     </div>
   <% end %>

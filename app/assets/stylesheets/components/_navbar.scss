@@ -8,6 +8,7 @@ a:hover {
 
 li {
   list-style: none;
+  font-weight: normal;
 }
 
 .btn-home {
@@ -23,7 +24,7 @@ li {
     border: none;
     background-size: 300% 100%;
     background-image: linear-gradient(to right, #eb3941, #f15e64, #e14e53, #e2373f);
-    box-shadow: 0 3px 12px rgba(242, 97, 103, .3);
+    box-shadow: 0 2px 7px rgba(242, 97, 103, .2);
     border-radius: 50px;
     moz-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;

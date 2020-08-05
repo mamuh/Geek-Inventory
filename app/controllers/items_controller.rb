@@ -4,6 +4,7 @@ class ItemsController < ApplicationController
 
   def index
     @items = Item.all
+    @items = Item.order('created_at DESC').page(params[:page]).per(10)
     if params[:query].present?
       @items = @items.search_by_name(params[:query])
     end

@@ -17,29 +17,32 @@
 
   <div class="cards">
     <% @items.each do |item| %>
-    <div class="card-trip">
-      <% if item.photo.attached? %>
-        <%= link_to item_path(item) do %>
-          <%= cl_image_tag item.photo.key, crop: :fit, width: 359, height: 200 %>
+      <div class="card-trip">
+        <% if item.photo.attached? %>
+          <%= link_to item_path(item) do %>
+            <%= cl_image_tag item.photo.key, crop: :fit, width: 359, height: 200 %>
+          <% end %>
         <% end %>
-      <% end %>
 
-      <%= link_to "Buy", item_transactions_path(item),method: :post, class: "btn-absolute" %>
+        <%= link_to "Buy", item_transactions_path(item),method: :post, class: "btn-absolute" %>
 
-      <div class="card-trip-infos">
-        <div>
+        <div class="card-trip-infos">
+          <div>
 
-          <div class="card-info text-left">
-            <h2><%= item.name %></h2>
-            <%= link_to "Details", item_path(item) %>
+            <div class="card-info text-left">
+              <h2><%= item.name %></h2>
+              <%= link_to "Details", item_path(item) %>
+            </div>
+          </div>
+          <div class="card-trip-princing text-right">
+            <p><%= item.category.name %></p>
+            <h2>$ <%= item.price %>.00</h2>
           </div>
         </div>
-        <div class="card-trip-princing text-right">
-          <p><%= item.category.name %></p>
-          <h2>$ <%= item.price %>.00</h2>
-        </div>
       </div>
-    </div>
     <% end %>
+  </div>
+  <div class="d-flex justify-content-center">
+    <%= paginate @items %>
   </div>
 </div>
