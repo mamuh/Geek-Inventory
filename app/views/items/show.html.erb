@@ -1,6 +1,4 @@
 <div class="container w-50 py-3">
-  <h2><%=@item.name%></h2>
-
   <div class="card-product my-2">
     <div class="item-image">
       <% if @item.photo.attached? %>
@@ -8,9 +6,9 @@
       <% end %>
     </div>
     <div class="card-product-infos">
-      <div>
+      <div style="width: 85%; word-wrap: break-word;">
         <h2><%=@item.name%></h2>
-        <p><%=@item.description%></p>
+        <p class="text-muted mt-2"><%=@item.description%></p>
       </div>
       <h2 class="card-product-pricing">$ <%=@item.price%>.00</h2>
     </div>
