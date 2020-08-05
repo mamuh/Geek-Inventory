@@ -1,5 +1,5 @@
 <div class="container w-50 bg-light mt-3 py-4 px-5 shadow-sm geek-form" style="border-radius: 15px;">
-<h2>Add new item to your inventory</h2><br>
+<h2>Add new item to the inventory</h2><br>
   <%= simple_form_for @item do |f| %>
     <%= f.input :name %>
     <%= f.input :price, input_html: { type: 'number', min: '1', step: '1' } %>
