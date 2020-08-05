@@ -9,8 +9,8 @@
       placeholder: "Find a product"
     %>
       <%= submit_tag "Search", class: "btn btn-primary" %>
-      <% if @items != Item.all %>
-        <%= link_to "Clear", items_path, class: "btn btn-secondary" %>
+      <% if @items != Item.order('created_at DESC').page(params[:page]).per(9) %>
+        <%= link_to "Clear", items_path, class: "btn btn-outline-secondary" %>
       <% end %>
     <% end %>
   </div>
