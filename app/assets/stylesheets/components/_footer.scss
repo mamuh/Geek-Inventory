@@ -12,9 +12,9 @@ footer {
 }
 
 .footer-items {
-  width: 92px;
+  width: 180px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   font-size: 20px;
 }
 
@@ -23,8 +23,14 @@ footer {
   transition-duration: 0.2s;
 }
 
-.footer-container img {
-  width: 190px;
+.footer-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  a {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
 }
 
 .footer-container .footer-items a {
