@@ -55,3 +55,24 @@ h1, h2, h3, h4, h5 {
   text-align: left;
   margin-top: 40px;
 }
+
+@media(max-width: 700px) {
+  .cta {
+    width: 75%;
+    span {
+      display: none !important;
+    }
+  }
+
+  #banner-typed-text {
+    display: none !important;
+  }
+
+  .btn-home {
+    display: none !important;
+  }
+
+  .btn-sell-mobile {
+    display: block !important;
+  }
+}
