@@ -3,7 +3,7 @@ class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :edit, :update, :destroy]
 
   def index
-    @items = Item.all
+    # @items = Item.all
     @items = Item.order('created_at DESC').page(params[:page]).per(9)
     if params[:query].present?
       @items = @items.search_by_name(params[:query])
