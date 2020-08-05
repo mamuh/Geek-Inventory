@@ -1,1 +1,2 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+## Geek inventory - a marketplace for classic video games items
+Web app built on Rails 6 where you can buy and sell video game items
