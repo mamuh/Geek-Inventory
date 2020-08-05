@@ -11,7 +11,7 @@ class TransactionsController < ApplicationController
     if @transaction.save
       redirect_to user_path(current_user)
     else
-      render :new
+      redirect_to new_session_path
     end
   end
 
