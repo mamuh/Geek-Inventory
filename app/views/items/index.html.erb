@@ -1,6 +1,6 @@
 <div class="container text-center pb-3">
 
-  <h2>What are you buying?</h2>
+  <h2 class="mb-4">What are you buying?</h2>
   <div class="form-group form-inline justify-content-center search-form">
     <%= form_tag items_path, method: :get do %>
     <%= text_field_tag :query,
@@ -16,6 +16,13 @@
       <%= submit_tag "Search", class: "btn btn-search" %>
     <% end %>
   </div>
+
+  <% if @items.empty? %>
+    <br>
+    <p>No results found...</p>
+    <br>
+    <%= link_to "Back to shop", items_path, class: "btn btn-search" %>
+  <% end %>
 
   <div class="cards">
     <% @items.each do |item| %>

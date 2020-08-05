@@ -5,6 +5,7 @@
     text-decoration: none;
     background-color: white;
     border: 1px solid #DDD;
+    border-radius: 3px;
     // border-left-width: 0;
     &:hover {
       // background-color: black;
@@ -16,6 +17,7 @@
 
 .pagination {
     border-left: 1px solid #ddd;
+    border-radius: 3px;
     .first{
         padding : 0;
         float: none;
