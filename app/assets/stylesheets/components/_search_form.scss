@@ -49,4 +49,13 @@
     width: 90% !important;
     padding: 15px !important;
   }
+
+  .search-form {
+  form {
+    width: 100%;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+    display: flex;
+    border-radius: 15px;
+  }
+}
 }
