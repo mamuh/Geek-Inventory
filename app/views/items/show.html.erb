@@ -6,11 +6,14 @@
       <% end %>
     </div>
     <div class="card-product-infos">
-      <div style="width: 85%; word-wrap: break-word;">
+      <div style="width: 80%; word-wrap: break-word;">
         <h2><%=@item.name%></h2>
         <p class="text-muted mt-2"><%=@item.description%></p>
       </div>
+      <div style="text-align: right;">
+      <small><%= @item.category.name %></small>
       <h2 class="card-product-pricing">$ <%=@item.price%>.00</h2>
+      </div>
     </div>
   </div>
 
@@ -18,7 +21,7 @@
 
       <% if current_user == @item.user %>
         <div class="show-buttons">
-          <%= link_to '<i class="fas fa-trash-alt"></i>'.html_safe, item_path(@item), method: :delete, class: "btn btn-dark btn-round" %>
+          <%= link_to '<i class="fas fa-trash-alt"></i>'.html_safe, item_path(@item), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-dark btn-round" %>
           <%= link_to "Edit product", edit_item_path(@item), class: "btn btn-outline-info btn-round" %>
         </div>
       <% end %>

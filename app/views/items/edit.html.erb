@@ -4,13 +4,13 @@
     <h2>Edit your item</h2><br>
       <%= simple_form_for @item do |f| %>
         <%= f.input :name %>
-        <%= f.input :price %>
+        <%= f.input :price, input_html: { type: 'number', min: '1', step: '1' } %>
         <%= f.input :description %>
         <%= f.association :category %>
         <%= f.input :photo, as: :file %>
         <div class="d-flex justify-content-between">
           <%= f.submit "Update item", class: "btn btn-warning btn-round" %>
-          <%= link_to "Back to shop", items_path, class: "btn btn-outline-secondary btn-round" %>
+          <%= link_to "Back to item", item_path(@item), class: "btn btn-outline-secondary btn-round" %>
         </div>
       <% end %>
     </div>
