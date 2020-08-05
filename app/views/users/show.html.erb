@@ -31,7 +31,8 @@
       <div class="card-product-infos-transaction">
         <h2><%= transaction.item.name %></h2>
         <p><%= transaction.item.description %></p>
-        <%= link_to "See details", item_path(transaction.item)  %>
+        <p class="text-muted">Bought on <%= transaction.created_at.strftime("%d/%m/%Y") %></p>
+        <p><%= link_to "See details", item_path(transaction.item)  %></p>
       </div>
     </div>
     <% end %>
