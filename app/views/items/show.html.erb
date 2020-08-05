@@ -21,12 +21,12 @@
 
       <% if current_user == @item.user %>
         <div class="show-buttons">
-          <%= link_to '<i class="fas fa-trash-alt"></i>'.html_safe, item_path(@item), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-dark btn-round" %>
-          <%= link_to "Edit product", edit_item_path(@item), class: "btn btn-outline-info btn-round" %>
+          <%= link_to '<i class="fas fa-trash-alt"></i>'.html_safe, item_path(@item), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-trash btn-round" %>
+          <%= link_to "Edit product", edit_item_path(@item), class: "btn btn-edit-product btn-round" %>
         </div>
       <% end %>
       <div class="show-buttons">
-        <%= link_to "Back to shop", items_path, class: "btn btn-outline-secondary btn-round" %>
+        <%= link_to "Back to shop", items_path, class: "btn btn-round btn-back-to-shop" %>
         <%= link_to "Buy", item_transactions_path(@item), method: :post, class: "btn btn-warning btn-buy btn-round" %>
       </div>
     </div>

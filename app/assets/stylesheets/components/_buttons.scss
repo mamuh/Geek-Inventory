@@ -1,0 +1,93 @@
+.btn {
+  font-size: 16px !important;
+}
+
+.btn-home {
+  width: 200px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px 25px;
+  margin: 20px;
+  height: 55px;
+  text-align:center;
+  border: none;
+  background-size: 300% 100%;
+  background-image: linear-gradient(to right, #eb3941, #f15e64, #e14e53, #e2373f);
+  box-shadow: 0 2px 7px rgba(242, 97, 103, .2);
+  border-radius: 50px;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.btn-home:hover {
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  color: white;
+  text-decoration: none;
+}
+
+.btn-home:focus {
+  outline: none;
+}
+
+.btn-round {
+  border-radius: 5px;
+}
+
+.btn-trash {
+  border: 1px solid #bfbfbf;
+  color: #bfbfbf;
+  &:hover {
+    background-color: #ce0011;
+    border: 1px solid #ce0011;
+    color: white;
+    opacity: 0.5;
+  }
+}
+
+.btn-edit-product {
+  border: 1px solid #43afce;
+  color: #43afce;
+  &:hover {
+    // background-color: #43afce;
+    opacity: 0.5;
+    // color: white;
+    color: #43afce;
+  }
+}
+
+.btn-back-to-shop {
+  border: 1px solid #aaaaaa;
+  color: #aaaaaa;
+  &:hover {
+    opacity: 0.5;
+    color: #aaaaaa;
+  }
+}
+
+.btn-buy {
+  padding-left: 30px;
+  padding-right: 30px;
+  background-size: 300% 100%;
+  background-image: linear-gradient(to right, #eb3941, #f15e64, #e14e53, #e2373f);
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  &:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    color: white;
+    text-decoration: none;
+  }
+}

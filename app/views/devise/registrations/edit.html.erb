@@ -1,4 +1,4 @@
-<div class="container pb-3">
+<div class="container w-50 bg-light mt-3 p-4 shadow-sm" style="border-radius: 15px;">
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -32,7 +32,7 @@
 
     <div class="form-actions mb-4 d-flex justify-content-between">
       <%= f.button :submit, "Update", class: "btn btn-info text-white btn-round" %>
-      <%= link_to "Back to profile", user_path(current_user.id), class: "btn btn-light btn-outline-secondary btn-round" %>
+      <%= link_to "Back to profile", user_path(current_user.id), class: "btn btn-back-to-shop btn-round" %>
     </div>
 
   <% end %>
